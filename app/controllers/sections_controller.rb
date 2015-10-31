@@ -1,6 +1,9 @@
 class SectionsController < ApplicationController
 
   layout "admin"
+
+  before_action :confirm_logged_in
+
    def index
     @page_title = "Sections"
     @sections = Section.sorted

@@ -2,7 +2,8 @@ class SubjectsController < ApplicationController
   
   layout "admin"
   
-
+  before_action :confirm_logged_in
+  
   def index
     @page_title = "Subjects"  
   	@subjects = Subject.sorted
